@@ -2,8 +2,6 @@
 
 An example Next.js website that shows Postgres full text search, next-image with Supabase storage, and sending an email based on an insert trigger with Supabase Functions.
 
-# Deploy this example using Vercel
-
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsupabase-community%2Fpartner-gallery-example&env=SUPABASE_HOSTNAME,NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY)
 
 # Usage
@@ -11,7 +9,7 @@ An example Next.js website that shows Postgres full text search, next-image with
 1. Create a new Supabase project, or use an existing one
 2. Run the `schema.sql` file in the Supabase dashboard to create the relevant tables
 3. Update the environment variables (either in Vercel or locally) with Supabase URL and Anon Key
-4. Deploy Supabase function for contract form notification
+4. Deploy Supabase function for contract form notification:
 
 ```
 supabase link --project-ref your-project-ref
