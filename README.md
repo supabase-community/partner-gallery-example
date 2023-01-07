@@ -27,5 +27,6 @@ Note: `SMTP_PORT` must be a port other than `25`, `465`, and `587` as Deno Deplo
 5. Setup a Supabase Function Hook to trigger the function when a new row is inserted into `partner_contacts`
    ![function hook setup 1](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/misc/partner-gallery-example-1.png)
    ![function hook setup 2](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/misc/partner-gallery-example-2.png)
+6. Within Vercel project settings, ensure Framework Preset is set to `Next.js` and Root Directory is set to `app`.
 6. Insert partners into the `partners` table.
 7. Celebrate together 🎉
