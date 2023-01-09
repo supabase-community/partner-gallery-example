@@ -42,7 +42,7 @@ create table partners (
       || setweight(to_tsvector('english', overview), 'C')
       || setweight(to_tsvector('english', category), 'D')
       || setweight(to_tsvector('english', slug), 'D')
-  ) stored;
+  ) stored
 );
 alter table partners enable row level security;
 
