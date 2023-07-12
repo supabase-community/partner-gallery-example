@@ -4,7 +4,7 @@ An example Next.js website that shows Postgres Full Text Search, `next-image` wi
 
 [![Partner Gallery screenshot](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/misc/partner-gallery-screenshot.png)](https://supabase.com/partners)
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsupabase-community%2Fpartner-gallery-example&project-name=supabase-partner-gallery-example&repository-name=supabase-partner-gallery-example&integration-ids=oac_VqOgBHqhEoFTPzGkPd7L0iH6&external-id=https%3A%2F%2Fgithub.com%2Fsupabase-community%2Fpartner-gallery-example%2Ftree%2Fmain)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fsupabase-community%2Fpartner-gallery-example&project-name=supabase-partner-gallery-example&repository-name=supabase-partner-gallery-example&integration-ids=oac_VqOgBHqhEoFTPzGkPd7L0iH6&external-id=https%3A%2F%2Fgithub.com%2Fsupabase-community%2Fpartner-gallery-example%2Ftree%2Fmain&root-directory=app)
 
 # Usage
 
