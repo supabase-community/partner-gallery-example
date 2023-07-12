@@ -1,4 +1,5 @@
 import { IconLoader, IconSearch, Input } from '@supabase/ui'
+import { error } from 'console'
 import Head from 'next/head'
 import { useRouter } from 'next/router'
 import React, { useEffect, useState } from 'react'
@@ -12,17 +13,18 @@ import supabase from '~/lib/supabase'
 import { Partner } from '~/types/partners'
 
 export async function getStaticProps() {
-  const { data: partners } = await supabase
+  const { data: partners, error } = await supabase
     .from<Partner>('partners')
     .select('*')
     .eq('approved', true)
     .eq('type', 'technology')
     .order('category')
     .order('title')
+  if (error) console.log(partners, error)
 
   return {
     props: {
-      partners,
+      partners: partners ?? [],
     },
     // TODO: consider using Next.js' On-demand Revalidation with Supabase function hooks instead
     revalidate: 18000, // In seconds - refresh every 5 hours

@@ -2,7 +2,16 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: [process.env.SUPABASE_HOSTNAME],
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: '**.supabase.co',
+      },
+      {
+        protocol: 'https',
+        hostname: 'supabase.com',
+      },
+    ],
   },
   async redirects() {
     return [
