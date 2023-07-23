@@ -11,17 +11,22 @@ An example Next.js website that shows Postgres Full Text Search, `next-image` wi
 1. Click the "Deploy" button above and run through the setup steps. This will automatically set your Supabase env vars and set up the Database schema located in the [migrations folder](./supabase/migrations/20230712074829_init.sql).
 2. Deploy Supabase Edge Function for contact form notifications:
 
-```
-supabase link --project-ref your-project-ref
-supabase secrets set SMTP_HOSTNAME="your.hostname.com" SMTP_PORT="2587" SMTP_USERNAME="your_username" SMTP_PASSWORD="your_password" SMTP_FROM="no-reply@example.com" SMTP_TO="you@example.com" FUNCTION_SECRET="your-random-secret"
-supabase functions deploy contact-notification
-```
+	```
+	supabase link --project-ref your-project-ref
+	supabase secrets set SMTP_HOSTNAME="your.hostname.com" SMTP_PORT="2587" SMTP_USERNAME="your_username" SMTP_PASSWORD="your_password" SMTP_FROM="no-reply@example.com" SMTP_TO="you@example.com" FUNCTION_SECRET="your-random-secret"
+	supabase functions deploy contact-notification
+	```
 
-Note: `SMTP_PORT` must be a port other than `25`, `465`, and `587` as Deno Deploy does not support outgoing connections to ports. AWS SES (port 2587) is recommended.
+	Note: `SMTP_PORT` must be a port other than `25`, `465`, and `587` as Deno Deploy does not support outgoing connections to ports. AWS SES (port 2587) is recommended.
 
-5. Setup a Supabase Function Hook to trigger the function when a new row is inserted into `partner_contacts`
+3. Setup a Supabase Function Hook to trigger the function when a new row is inserted into `partner_contacts`
    ![function hook setup 1](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/misc/partner-gallery-example-1.png)
    ![function hook setup 2](https://obuldanrptloktxcffvn.supabase.co/storage/v1/object/public/images/misc/partner-gallery-example-2.png)
-6. Within Vercel project settings, ensure Framework Preset is set to `Next.js` and Root Directory is set to `app`.
-7. Insert partners into the `partners` table.
-8. Celebrate together 🎉
+4. Within Vercel project settings, ensure Framework Preset is set to `Next.js` and Root Directory is set to `app`.
+5. Insert partners into the `partners` table.
+6. Celebrate together 🎉
+
+
+## Resources
+- [TGIF: Postgres Full Text Search & sending emails from Edge Functions](https://youtu.be/ZhlXnWRts04)
+- [Edge Functions](https://vercel.com/docs/concepts/functions/edge-functions)
