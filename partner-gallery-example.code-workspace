@@ -1,0 +1,23 @@
+{
+  "folders": [
+    {
+      "name": "project-root",
+      "path": "./"
+    },
+    {
+      "name": "nextjs-app",
+      "path": "app"
+    },
+    {
+      "name": "supabase-functions",
+      "path": "supabase/functions"
+    }
+  ],
+  "settings": {
+    "files.exclude": {
+      "node_modules/": true,
+      "app/": true,
+      "supabase/functions/": true
+    }
+  }
+}
